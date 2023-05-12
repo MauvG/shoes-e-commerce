@@ -1,5 +1,5 @@
 {
-  "name": "shoes-e-commerce",
+  "name": "vite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,15 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@chec/commerce.js": "^2.8.0",
-    "@material-ui/core": "^4.12.4",
-    "@material-ui/icons": "^4.11.3",
-    "@stripe/react-stripe-js": "^2.1.0",
-    "@stripe/stripe-js": "^1.52.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-hook-form": "^7.43.9",
-    "react-router-dom": "^6.11.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
