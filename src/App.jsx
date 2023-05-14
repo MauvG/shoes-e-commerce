@@ -1,14 +1,11 @@
-import Announcement from "./components/Announcement";
-import Navbar from "./components/Navbar";
-import Slider from "./components/Slider";
 import Homepage from "./pages/Homepage";
+import Men from "./pages/Men";
 
 const App = () => {
   return (
     <div>
-      <Announcement />
-      <Navbar />
-      <Slider />
+      {/* <Homepage /> */}
+      <Men />
     </div> 
   );
 };

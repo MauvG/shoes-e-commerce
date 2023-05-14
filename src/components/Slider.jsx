@@ -1,20 +1,20 @@
 import { ArrowLeftOutlined, ArrowRightAltOutlined, ArrowRightOutlined } from "@material-ui/icons"
 import { useState } from "react"
 import { styled } from "styled-components"
-import { sliderItems } from "../sliderData" 
+import { sliderItems } from "../data" 
 
 const Container = styled.div`
     width: 100%;
     height: 100vh;
     display: flex;
-    background-color: white;
+    background-color: #f5f5f5;
     position: relative;
     overflow: hidden;
 `
 const Arrow = styled.div`
     width: 50px;
     height: 50px;
-    background-color: #ffffff;
+    background-color: #f1f1f1;
     border-radius: 50%; 
     display: flex;
     align-items: center;
@@ -26,7 +26,6 @@ const Arrow = styled.div`
     right: ${props => props.direction === "right" && "10px"};
     margin: auto;
     cursor: pointer;
-    opacity: 0.5;
     z-index: 2;
 `
 
@@ -50,15 +49,17 @@ const ImageContainer = styled.div`
 `
 
 const Image = styled.img`
-    margin-left: 200px;
-    height: 80%; 
+    margin-left: 100px;
+    margin-top: 100px;
+    height: 60%; 
+    width: 70%;
+    object-fit: cover;
 `
 
 const InfoContainer = styled.div`
     flex: 1;
-    padding: 50px;
+    padding: 100px;
 `
-
 const Title = styled.h1`
     font-size: 70px;
 `
@@ -73,7 +74,12 @@ const Button = styled.button`
     font-size: 20px;
     background-color: transparent;
     cursor: pointer;
-
+    transition: 200ms;
+    
+    &:hover { 
+        background-color: #000000;  
+        color: white;
+    }
 `
 
 const Slider = () => {
@@ -95,9 +101,9 @@ const Slider = () => {
 
         <Wrapper slideIndex={slideIndex}>
             {sliderItems.map((item) => (
-            <Slide>
+            <Slide> 
                 <ImageContainer>
-                    <Image src={item.image} />
+                    <Image src={item.image} key={item.id}/>
                 </ImageContainer>
                 
                 <InfoContainer>
@@ -116,4 +122,4 @@ const Slider = () => {
   )
 }
 
-export default Slider
+export default Slider;
