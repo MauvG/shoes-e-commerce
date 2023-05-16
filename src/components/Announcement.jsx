@@ -14,7 +14,7 @@ const Container = styled.div`
 const Announcement = () => {
   return (
     <Container>
-        100% OFF, SALE!
+        25% OFF SITE-WIDE! 
     </Container>
   )
 }

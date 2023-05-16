@@ -25,7 +25,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5fbfd;
+  background-color: #f5f5f5;
   position: relative;
 
   &:hover ${Info}{
@@ -34,7 +34,7 @@ const Container = styled.div`
 `
 
 const Image = styled.img`
-  height: 75%;
+  height: 100%; 
 `
 
 const Icon = styled.div`

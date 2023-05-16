@@ -11,10 +11,11 @@ const Image = styled.img`
   height: 100%;
   object-fit: cover;
   opacity: 0.9;
+  border: 5px solid white;
   transition: 100ms;
-
+  
   &:hover {
-    border: 5px solid black;
+    border-color: black;
   }
 `
 

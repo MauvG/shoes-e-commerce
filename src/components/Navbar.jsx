@@ -40,8 +40,18 @@ const Center = styled.div`
   text-align: center;
 `
 
+const Link = styled.a`
+  text-decoration: none;
+  color: black;
+  background-color: white;
+`
+
 const Logo = styled.h1`
   font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `
 
 const Right = styled.div`
@@ -70,7 +80,9 @@ const Navbar = () => {
           </Left>
 
           <Center>
-            <Logo>MG Footwear</Logo>
+            <Link href='/'>
+              <Logo>MG Footwear</Logo>
+            </Link>
           </Center>
 
           <Right>

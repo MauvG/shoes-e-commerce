@@ -2,17 +2,21 @@ import Announcement from "../components/Announcement";
 import Navbar from "../components/Navbar";
 import Slider from "../components/Slider";
 import Categories from "../components/Categories";
-import Products from "../components/Products";
+import Footer from "../components/Footer";
+import { styled } from "styled-components";
+
+const Container = styled.div`
+`
 
 const Homepage = () => {
   return (
-    <div>
-      <Announcement />
+    <Container>
       <Navbar />
+      <Announcement />
       <Slider />
       <Categories />
-      <Products />
-    </div> 
+      <Footer />
+    </Container> 
   );
 };
 
