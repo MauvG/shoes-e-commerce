@@ -1,28 +1,28 @@
-import { Badge } from '@material-ui/core'
-import { Search, ShoppingCartOutlined } from '@material-ui/icons'
-import React from 'react'
-import { styled } from 'styled-components'
+import { Badge } from "@material-ui/core";
+import { Search, ShoppingCartOutlined } from "@material-ui/icons";
+import React from "react";
+import { styled } from "styled-components";
 
 const Container = styled.div`
   height: 60px;
-`
+`;
 
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-`
+`;
 
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-`
+`;
 const Language = styled.span`
   font-size: 14px;
-  cursor: pointer;  
-`
+  cursor: pointer;
+`;
 const SearchContainer = styled.div`
   border: 1px solid lightgray;
   display: flex;
@@ -33,18 +33,18 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
-`
+`;
 
 const Center = styled.div`
   flex: 1;
   text-align: center;
-`
+`;
 
 const Link = styled.a`
   text-decoration: none;
   color: black;
   background-color: white;
-`
+`;
 
 const Logo = styled.h1`
   font-weight: bold;
@@ -52,51 +52,51 @@ const Logo = styled.h1`
   &:hover {
     text-decoration: underline;
   }
-`
+`;
 
 const Right = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-`
+`;
 
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
-`
+`;
 
 const Navbar = () => {
   return (
     <Container>
-        <Wrapper>
-          <Left>
-            <Language>EN</Language>
-            {/* <SearchContainer>
+      <Wrapper>
+        <Left>
+          <Language>EN</Language>
+          {/* <SearchContainer>
               <Input />
               <Search style={{color: "gray", fontSize: 16}} />
             </SearchContainer>   */}
-          </Left>
+        </Left>
 
-          <Center>
-            <Link href='/'>
-              <Logo>MG Footwear</Logo>
-            </Link>
-          </Center>
+        <Center>
+          <Link href="/">
+            <Logo>MG Footwear</Logo>
+          </Link>
+        </Center>
 
-          <Right>
-            <MenuItem>Register</MenuItem>
-            <MenuItem>Login</MenuItem>
-            <MenuItem>
-              <Badge badgeContent={4} color="primary">
-                <ShoppingCartOutlined />
-              </Badge>
-            </MenuItem>
-          </Right>
-        </Wrapper>
+        <Right>
+          <MenuItem>Register</MenuItem>
+          <MenuItem>Login</MenuItem>
+          <MenuItem>
+            <Badge badgeContent={4} color="primary">
+              <ShoppingCartOutlined />
+            </Badge>
+          </MenuItem>
+        </Right>
+      </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
 export default Navbar;

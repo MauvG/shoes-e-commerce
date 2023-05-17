@@ -5,8 +5,7 @@ import Categories from "../components/Categories";
 import Footer from "../components/Footer";
 import { styled } from "styled-components";
 
-const Container = styled.div`
-`
+const Container = styled.div``;
 
 const Homepage = () => {
   return (
@@ -16,7 +15,7 @@ const Homepage = () => {
       <Slider />
       <Categories />
       <Footer />
-    </Container> 
+    </Container>
   );
 };
 

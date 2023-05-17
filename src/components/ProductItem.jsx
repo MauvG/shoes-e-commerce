@@ -1,5 +1,9 @@
-import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from "@material-ui/icons"
-import { styled } from "styled-components"
+import {
+  FavoriteBorderOutlined,
+  SearchOutlined,
+  ShoppingCartOutlined,
+} from "@material-ui/icons";
+import { styled } from "styled-components";
 
 const Info = styled.div`
   opacity: 0;
@@ -15,7 +19,7 @@ const Info = styled.div`
   justify-content: center;
   transition: all 0.5s ease;
   cursor: pointer;
-`
+`;
 
 const Container = styled.div`
   flex: 1;
@@ -28,14 +32,14 @@ const Container = styled.div`
   background-color: #f5f5f5;
   position: relative;
 
-  &:hover ${Info}{
+  &:hover ${Info} {
     opacity: 1;
   }
-`
+`;
 
 const Image = styled.img`
-  height: 100%; 
-`
+  height: 100%;
+`;
 
 const Icon = styled.div`
   width: 40px;
@@ -52,12 +56,12 @@ const Icon = styled.div`
     background-color: #e9f5f5;
     transform: scale(1.1);
   }
-`
+`;
 
-const ProductItem = ({item}) => {
+const ProductItem = ({ item }) => {
   return (
     <Container>
-      <Image src={item.image}/>
+      <Image src={item.image} />
       <Info>
         <Icon>
           <ShoppingCartOutlined />
@@ -70,7 +74,7 @@ const ProductItem = ({item}) => {
         </Icon>
       </Info>
     </Container>
-  )
-}
+  );
+};
 
-export default ProductItem
+export default ProductItem;
