@@ -86,6 +86,11 @@ const Button = styled.button`
   }
 `;
 
+const Link = styled.a`
+  color: black;
+  text-decoration: none;
+`;
+
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
 
@@ -113,7 +118,9 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Description>{item.description}</Description>
-              <Button>Shop Now</Button>
+              <Link href={item.title.replace(/\s/g, "")}>
+                <Button>Shop Now</Button>
+              </Link>
             </InfoContainer>
           </Slide>
         ))}

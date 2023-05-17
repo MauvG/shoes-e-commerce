@@ -4,6 +4,7 @@ import React from "react";
 import { styled } from "styled-components";
 
 const Container = styled.div`
+  margin-top: 10px;
   height: 60px;
 `;
 
@@ -19,12 +20,10 @@ const Left = styled.div`
   display: flex;
   align-items: center;
 `;
-const Language = styled.span`
-  font-size: 14px;
-  cursor: pointer;
-`;
+
 const SearchContainer = styled.div`
-  border: 1px solid lightgray;
+  border: 1px solid darkgray;
+  border-radius: 10%;
   display: flex;
   align-items: center;
   margin-left: 25px;
@@ -33,25 +32,34 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
+  outline: none;
 `;
 
 const Center = styled.div`
   flex: 1;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Category = styled.h3`
+  cursor: pointer;
+  margin-left: 25px;
 `;
 
 const Link = styled.a`
   text-decoration: none;
   color: black;
   background-color: white;
-`;
-
-const Logo = styled.h1`
-  font-weight: bold;
 
   &:hover {
     text-decoration: underline;
   }
+`;
+
+const Logo = styled.h1`
+  font-weight: bold;
 `;
 
 const Right = styled.div`
@@ -65,6 +73,7 @@ const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+  font-weight: 500;
 `;
 
 const Navbar = () => {
@@ -72,24 +81,37 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Language>EN</Language>
-          {/* <SearchContainer>
-              <Input />
-              <Search style={{color: "gray", fontSize: 16}} />
-            </SearchContainer>   */}
+          <Link href="/">
+            <Logo>MG Footwear</Logo>
+          </Link>
         </Left>
 
         <Center>
-          <Link href="/">
-            <Logo>MG Footwear</Logo>
+          <Link href="/Men">
+            <Category>Men</Category>
+          </Link>
+          <Link href="/Women">
+            <Category>Women</Category>
+          </Link>
+          <Link href="/Kids">
+            <Category>Kids</Category>
           </Link>
         </Center>
 
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Login</MenuItem>
+          <SearchContainer>
+            <Input placeholder="search" />
+            <Search style={{ color: "black", fontSize: 16 }} />
+          </SearchContainer>
+
+          <Link href="/register">
+            <MenuItem>Register</MenuItem>
+          </Link>
+          <Link href="/login">
+            <MenuItem>Login</MenuItem>
+          </Link>
           <MenuItem>
-            <Badge badgeContent={4} color="primary">
+            <Badge badgeContent={4} color="primary" href="/cart">
               <ShoppingCartOutlined />
             </Badge>
           </MenuItem>

@@ -1,11 +1,11 @@
-import {
-  FavoriteBorderOutlined,
-  SearchOutlined,
-  ShoppingCartOutlined,
-} from "@material-ui/icons";
 import { styled } from "styled-components";
 
-const Info = styled.div`
+const Container = styled.div`
+  flex: 1;
+  /* margin: 10px; */
+`;
+
+const Highlight = styled.div`
   opacity: 0;
   width: 100%;
   height: 100%;
@@ -17,13 +17,13 @@ const Info = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease;
+  transition: all 300ms ease;
   cursor: pointer;
 `;
 
-const Container = styled.div`
+const ImageContainer = styled.div`
   flex: 1;
-  margin: 5px;
+  margin: 10px;
   min-width: 280px;
   height: 350px;
   display: flex;
@@ -32,7 +32,7 @@ const Container = styled.div`
   background-color: #f5f5f5;
   position: relative;
 
-  &:hover ${Info} {
+  &:hover ${Highlight} {
     opacity: 1;
   }
 `;
@@ -41,37 +41,26 @@ const Image = styled.img`
   height: 100%;
 `;
 
-const Icon = styled.div`
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-  transition: all 0.5s ease;
-
-  &:hover {
-    background-color: #e9f5f5;
-    transform: scale(1.1);
-  }
+const Info = styled.div`
+  padding-left: 10px;
 `;
+
+const Name = styled.p``;
+const Price = styled.p``;
+const Link = styled.a``;
 
 const ProductItem = ({ item }) => {
   return (
     <Container>
-      <Image src={item.image} />
+      <Link href={item.name.replace(/\s/g, "")}>
+        <ImageContainer>
+          <Image src={item.image} />
+          <Highlight />
+        </ImageContainer>
+      </Link>
       <Info>
-        <Icon>
-          <ShoppingCartOutlined />
-        </Icon>
-        <Icon>
-          <SearchOutlined />
-        </Icon>
-        <Icon>
-          <FavoriteBorderOutlined />
-        </Icon>
+        <Name>{item.name}</Name>
+        <Price>€{item.price}</Price>
       </Info>
     </Container>
   );
