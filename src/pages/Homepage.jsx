@@ -14,7 +14,7 @@ const Homepage = () => {
       <Announcement />
       <Slider />
       <Categories />
-      <Footer />
+      <Footer />  
     </Container>
   );
 };

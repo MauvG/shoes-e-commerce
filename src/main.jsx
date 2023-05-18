@@ -11,6 +11,8 @@ import Homepage from "./pages/Homepage";
 import Men from "./pages/Men";
 import Shoe from "./pages/Shoe";
 import ErrorPage from "./pages/ErrorPage";
+import Kids from "./pages/Kids";
+import Women from "./pages/Women";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +29,15 @@ const router = createBrowserRouter([
         element: <Men />,
       },
       {
-        path: "Shoe",
+        path: "Women",
+        element: <Women />,
+      },
+      {
+        path: "Kids",
+        element: <Kids />,
+      },
+      {
+        path: "DunkLow",
         element: <Shoe />,
       },
     ],

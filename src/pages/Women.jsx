@@ -11,16 +11,16 @@ const Title = styled.h2`
   font-weight: 300;
 `;
 
-const Men = () => {
+const Women = () => {
   return (
     <Container>
       <Navbar />
       <Announcement />
-      <Title>Men's Shoes</Title>
-      <Products category={"men"} />
+      <Title>Women's Shoes</Title>
+      <Products category="women" />
       <Footer />
     </Container>
   );
 };
 
-export default Men;
+export default Women;

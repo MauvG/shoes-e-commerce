@@ -1,20 +1,27 @@
 import { styled } from "styled-components";
-import { men } from "../data";
+import { shoes } from "../data";
 import ProductItem from "./ProductItem";
+import { useEffect, useState } from "react";
 
 const Container = styled.div`
+  margin-left: 50px;
+  margin-right: 50px;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 `;
 
-const Products = () => {
+const Products = ({ category }) => {
   return (
     <Container>
-      {men.map((item) => (
-        <ProductItem item={item} key={item.id} />
-      ))}
+      {shoes.map((item) =>
+        item.category === category ? (
+          <ProductItem item={item} key={item.id} />
+        ) : (
+          <></>
+        )
+      )}
     </Container>
   );
 };
