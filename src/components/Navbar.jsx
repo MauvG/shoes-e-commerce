@@ -111,7 +111,7 @@ const Navbar = () => {
             <MenuItem>Login</MenuItem>
           </Link>
           <MenuItem>
-            <Badge badgeContent={4} color="primary" href="/cart">
+            <Badge badgeContent={4} color="primary" href="/cart" overlap="rectangular">
               <ShoppingCartOutlined />
             </Badge>
           </MenuItem>

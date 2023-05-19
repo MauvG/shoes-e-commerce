@@ -14,11 +14,21 @@ const Shoe = () => {
     location.pathname.toLowerCase().replace("/", "")
   );
 
+  const [index, setIndex] = useState(2);
+
+  useEffect(() => {
+    for (let i = 0; i < shoes.length; i++) {
+      if (shoes[i].name.toLowerCase().replace(/\s/g, "") == url) {
+        setIndex(i);
+      }
+    }
+  });
+
   return (
     <Container>
       <Navbar />
       <Announcement />
-      <ProductPage item={shoes[0]} />
+      <ProductPage item={shoes[index]} />
       <Footer />
     </Container>
   );

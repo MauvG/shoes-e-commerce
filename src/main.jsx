@@ -38,6 +38,50 @@ const router = createBrowserRouter([
         path: "DunkLow",
         element: <Shoe />,
       },
+      {
+        path: "Airforce1",
+        element: <Shoe />,
+      },
+      {
+        path: "AirJordan1Mid",
+        element: <Shoe />,
+      },
+      {
+        path: "Revolution6",
+        element: <Shoe />,
+      },
+      {
+        path: "AirForce1Shadow",
+        element: <Shoe />,
+      },
+      {
+        path: "AirForce107",
+        element: <Shoe />,
+      },
+      {
+        path: "AirMax270",
+        element: <Shoe />,
+      },
+      {
+        path: "AirMaxSystm",
+        element: <Shoe />,
+      },
+      {
+        path: "KidsDunkLow",
+        element: <Shoe />,
+      },
+      {
+        path: "Jordan1RetroHighOG",
+        element: <Shoe />,
+      },
+      {
+        path: "KidsRevolution6",
+        element: <Shoe />,
+      },
+      {
+        path: "FlexRunner2",
+        element: <Shoe />,
+      },
     ],
   },
 ]);
