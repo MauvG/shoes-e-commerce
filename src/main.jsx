@@ -8,11 +8,9 @@ import {
 } from "react-router-dom";
 
 import Homepage from "./pages/Homepage";
-import Men from "./pages/Men";
 import Shoe from "./pages/Shoe";
 import ErrorPage from "./pages/ErrorPage";
-import Kids from "./pages/Kids";
-import Women from "./pages/Women";
+import CategoryPage from "./pages/CategoryPage";
 
 const router = createBrowserRouter([
   {
@@ -26,15 +24,15 @@ const router = createBrowserRouter([
       },
       {
         path: "Men",
-        element: <Men />,
+        element: <CategoryPage />,
       },
       {
         path: "Women",
-        element: <Women />,
+        element: <CategoryPage />,
       },
       {
         path: "Kids",
-        element: <Kids />,
+        element: <CategoryPage />,
       },
       {
         path: "DunkLow",

@@ -5,15 +5,14 @@ import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import ProductPage from "../components/ProductPage";
 import { shoes } from "../data";
+import { useLocation } from "react-router-dom";
 
 const Container = styled.div``;
 
 const Shoe = () => {
   const [url, setUrl] = useState(
-    window.location.href.toLowerCase().replace(/^[^/]+/, "")
+    location.pathname.toLowerCase().replace("/", "")
   );
-
-  console.log(url);
 
   return (
     <Container>

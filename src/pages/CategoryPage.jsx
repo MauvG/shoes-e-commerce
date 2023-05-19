@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
 import Products from "../components/Products";
 import Footer from "../components/Footer";
+import { useState } from "react";
 
 const Container = styled.div``;
 const Title = styled.h2`
@@ -11,16 +12,20 @@ const Title = styled.h2`
   font-weight: 300;
 `;
 
-const Women = () => {
+const CategoryPage = () => {
+  const [category, setCategory] = useState(location.pathname.replace("/", ""));
+
+  console.log(category);
+
   return (
     <Container>
       <Navbar />
       <Announcement />
-      <Title>Women's Shoes</Title>
-      <Products category="women" />
+      <Title>{category === "Kids" ? "Kids'" : category + "'s"} Shoes</Title>
+      <Products category={category.toLowerCase()} />
       <Footer />
     </Container>
   );
 };
 
-export default Women;
+export default CategoryPage;
