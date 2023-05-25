@@ -91,7 +91,7 @@ const Link = styled.a`
   text-decoration: none;
 `;
 
-const Slider = () => {
+const Slider = () => {  
   const [slideIndex, setSlideIndex] = useState(0);
 
   const handleClick = (direction) => {
