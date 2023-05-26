@@ -84,16 +84,52 @@ const Text = styled.p`
   margin-top: 10px;
 `;
 
-const Rating = styled.h2`
-  margin-top: 50px;
-  font-weight: 300;
+const Quantity = styled.div`
+  display: flex;
+  align-items: center;
+  font-weight: 700;
 `;
 
-const Stars = styled.div`
-  margin: 20px;
+const Button = styled.button`
+  margin-top: 20px;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 200ms;
+
+  &:hover {
+    background-color: #000000;
+    color: white;
+  }
+`;
+
+const Amount = styled.span`
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 `;
 
 const ProductPage = ({ item }) => {
+  const [quantity, setQuantity] = useState(1);
+
+  const decrease = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  const increase = () => {
+    if (quantity < 9) {
+      setQuantity(quantity + 1);
+    }
+  };
+
   return (
     <Container>
       <SemiContainer>
@@ -115,6 +151,11 @@ const ProductPage = ({ item }) => {
               <Size>11</Size>
               <Size>12</Size>
             </SelectMenu>
+            <Quantity>
+              <Button onClick={decrease}>-</Button>
+              <Amount>{quantity}</Amount>
+              <Button onClick={increase}>+</Button>
+            </Quantity>
             <CartButton>Add to cart</CartButton>
           </Item>
           <Item>
