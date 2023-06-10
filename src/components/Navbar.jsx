@@ -99,20 +99,16 @@ const Navbar = () => {
         </Center>
 
         <Right>
-          <SearchContainer>
-            <Input placeholder="search" />
-            <Search style={{ color: "black", fontSize: 16 }} />
-          </SearchContainer>
-
-          <Link href="/register">
-            <MenuItem>Register</MenuItem>
-          </Link>
-          <Link href="/login">
-            <MenuItem>Login</MenuItem>
-          </Link>
           <MenuItem>
-            <Badge badgeContent={4} color="primary" href="/cart" overlap="rectangular">
-              <ShoppingCartOutlined />
+            <Badge
+              badgeContent={0}
+              color="primary"
+              href="/cart"
+              overlap="rectangular"
+            >
+              <Link href="Cart">
+                <ShoppingCartOutlined />
+              </Link>
             </Badge>
           </MenuItem>
         </Right>

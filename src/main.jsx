@@ -11,6 +11,7 @@ import Homepage from "./pages/Homepage";
 import Shoe from "./pages/Shoe";
 import ErrorPage from "./pages/ErrorPage";
 import CategoryPage from "./pages/CategoryPage";
+import Cart from "./pages/cart";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Homepage />,
+      },
+      {
+        path: "Cart",
+        element: <Cart />,
       },
       {
         path: "Men",

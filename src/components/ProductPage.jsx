@@ -117,6 +117,8 @@ const Amount = styled.span`
 
 const ProductPage = ({ item }) => {
   const [quantity, setQuantity] = useState(1);
+  const [cartButton, setCartButton] = useState("Add to Cart");
+  const [inCart, setInCart] = useState(false);
 
   const decrease = () => {
     if (quantity > 1) {
@@ -128,6 +130,17 @@ const ProductPage = ({ item }) => {
     if (quantity < 9) {
       setQuantity(quantity + 1);
     }
+  };
+
+  const handleCart = () => {
+    if (!inCart) {
+      setCartButton("Remove from Cart");
+      item.cart = true;
+    } else {
+      setCartButton("Add to cart");
+      item.cart = false;
+    }
+    setInCart(!inCart);
   };
 
   return (
@@ -156,7 +169,7 @@ const ProductPage = ({ item }) => {
               <Amount>{quantity}</Amount>
               <Button onClick={increase}>+</Button>
             </Quantity>
-            <CartButton>Add to cart</CartButton>
+            <CartButton onClick={handleCart}>{cartButton}</CartButton>
           </Item>
           <Item>
             <Heading>Free Delivery and Returns</Heading>
